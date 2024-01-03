@@ -1,0 +1,122 @@
+body {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 97vh;
+    background-color: hsl(216, 12%, 8%);
+    color: hsl(0, 0%, 100%);
+    font-family: 'Rubik', sans-serif;
+}
+.selection {
+    transition: opacity 0.5s ease-out, max-height 1s ease-out;
+    opacity: 1;
+    min-height: 300px;        
+    width: 20%;
+    background-color: hsl(213, 19%, 18%);
+    padding: 2%;
+    border-radius: 20px;
+}
+.selection.hidden{
+    opacity: 0;
+    max-height: 0;
+    display: none;
+}
+#pragraph-in-selection{
+    color:hsl(217, 12%, 63%) ;
+    font-weight: 400;
+}
+.buttons-in-selection{
+    background-color:hsl(210, 12%, 25%);
+    color: hsl(217, 12%, 63%);
+    height: 40px;
+    width: 40px;
+    border: none;
+    border-radius: 25px;
+    transition: 0.35s;
+}
+.rate{
+    color: white;
+    text-decoration: none;
+}
+.buttons-in-selection:hover{
+    background-color: hsl(25, 97%, 53%);
+    color: white;
+}
+.buttons-in-selection:target{
+    background-color: hsl(217, 12%, 63%);
+    color: white;
+}
+.div-for-buttons {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap;
+}   
+.div-for-submit{
+    margin-top: 5%;
+}
+.submit {
+    background-color:hsl(25, 97%, 53%);
+    width: 100%;
+    border-radius: 20px;
+    padding: 10px;
+    border: none;
+    color: white;
+    transition: all 0.35s;  
+}
+.submit:hover{
+    background-color: white;
+    color: hsl(25, 97%, 53%);
+}
+.submit:active{
+    background-color: rgb(166, 164, 164);
+}
+.rating {
+    visibility: hidden;
+    max-height: 0;
+    transition: opacity 0.5s ease-out, max-height 1s ease-out;
+}
+.rating.visible{
+    visibility: visible;
+    min-height: 300px;
+    opacity: 1;
+    width: 20%;
+    background-color: hsl(213, 19%, 18%);
+    padding: 2%;
+    border-radius: 20px;
+    text-align: center;
+}
+.information-of-rating{
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: hsl(25, 97%, 53%);
+    background-color: hsl(210, 12%, 25%);
+}
+.thanks {
+    margin-bottom: 0;
+    font-weight: 700;
+}
+.pragraph-in-rating{
+    margin-top: 10px;
+    color: hsl(217, 12%, 63%);
+    font-weight: 400;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    width: 100%;
+  }
+  .attribution {    
+    margin-top: auto;
+  } 
+@media screen and (max-width:767px) {
+    .rating.visible {
+        min-height: 600px;
+    }
+}
